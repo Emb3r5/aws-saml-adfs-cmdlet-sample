@@ -170,12 +170,7 @@ namespace AWSSAML
             ConsoleKeyInfo key;
             int index = 0;
 
-            do
-            {
-                key = Console.ReadKey();
-                index = int.Parse(key.KeyChar.ToString());
-            } while (!Char.IsNumber(key.KeyChar) || index > awsSamlRoles.Length - 1);
-            Console.WriteLine();
+            index = Convert.ToInt32(Console.ReadLine());
 
             return awsSamlRoles[index];
         }
